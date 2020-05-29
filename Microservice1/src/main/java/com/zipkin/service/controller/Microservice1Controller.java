@@ -36,7 +36,7 @@ class Microservice1Controller {
 	@GetMapping(value = "/microservice1")
 	public String method1() {
 		long startTime = System.currentTimeMillis();
-		LOG.info("Inside method1");
+		LOG.info("Inside method1!!!");
 		String baseUrl = "http://localhost:8084/microservice2";
 		String response = (String) restTemplate.exchange(baseUrl, HttpMethod.GET, null, String.class).getBody();
 		long endTime = System.currentTimeMillis();
